@@ -46,11 +46,11 @@ $pizza = false;
                             <li class="list-group-item text-center"> <?php echo htmlspecialchars($ing) ?> </li>      
                         <?php } ?>
                     </ul>
-                    <form action="POST">
-                    <input type="submit" href="details.php?id=<?php echo $pizza["id"] ?>" class="btn btn-outline-success my-2 my-sm-0" type="">Details</input>
+                    <!-- <form action="POST">
+                        <input type="submit" href="details.php?id=<?php echo $pizza["id"] ?>" class="btn btn-outline-success my-2 my-sm-0" type="">Details</input>
+                    </form> -->
 
                     
-                    </form>
                 </div>
 
             <?php } ?>

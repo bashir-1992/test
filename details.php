@@ -1,6 +1,6 @@
 <?php 
 
-    var_dum($_POST["delete"]);
+    var_dump($_POST);
 
     include("config/db_connect.php");
 
@@ -57,10 +57,10 @@
         <h5> <?php echo htmlspecialchars($pizza["ingredienten"]); ?> </h5>
 
     <!-- DELETE FORM -->
-    <form action="details.php" methode="POST"> 
-        <input type="hidden" name="id_to_delete" value=" <?php echo $pizza["id"] ?>">
+    <!-- <form action="details.php" methode="POST"> 
+        <input type="hidden" name="id_to_delete" value="<?php echo $pizza["id"] ?>">
         <input type="submit" name="delete" value="Delete"  class="btn btn-outline-success">
-    </form>
+    </form> -->
     <?php else: ?>
         
         <h5>No such pizza exists!</h5>
