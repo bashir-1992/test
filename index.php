@@ -1,6 +1,8 @@
 
 <?php 
 
+
+$pizza = false;
     include("config/db_connect.php");
 
     // write query for all pizza
@@ -37,16 +39,18 @@
             
                
                 <div class="card col" style="width: 18rem;">
-                    <!-- <div class="card-header"></div> -->
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item text-center"> <?php echo htmlspecialchars($pizza["title"]) ?> </li>      
                 
                             <?php foreach(explode(",", $pizzas[0]["ingredienten"]) as $ing) { ?>
                             <li class="list-group-item text-center"> <?php echo htmlspecialchars($ing) ?> </li>      
                         <?php } ?>
-                        <!-- <li class="list-group-item"> <?php echo htmlspecialchars($pizza["id"]) ?> </li> -->
                     </ul>
-                    <a href="details.php?id= <?php echo $pizza["id"] ?>" class="btn btn-outline-success my-2 my-sm-0" type="">Details</a>
+                    <form action="POST">
+                    <input type="submit" href="details.php?id=<?php echo $pizza["id"] ?>" class="btn btn-outline-success my-2 my-sm-0" type="">Details</input>
+
+                    
+                    </form>
                 </div>
 
             <?php } ?>

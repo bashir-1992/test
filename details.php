@@ -1,6 +1,6 @@
 <?php 
 
-    // $pizza = false;
+    var_dum($_POST["delete"]);
 
     include("config/db_connect.php");
 
@@ -18,7 +18,6 @@
             echo "query error: ". mysqli_error($conn);
         }
     }
-
 
 
     // check GET id param
